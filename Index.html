@@ -234,7 +234,8 @@
                     </div>
                     <div>
                         <div class="flex justify-between items-center text-xl font-semibold">
-                            <p>Seat  <span id="buySeat" class="bg-[#1DD100] px-3 py-1 rounded-xl text-white text-sm ">0</span></p>
+                            <p>Seat <span id="buySeat"
+                                    class="bg-[#1DD100] px-3 py-1 rounded-xl text-white text-sm ">0</span></p>
                             <p>Class</p>
                             <p>Price</p>
                         </div>
@@ -246,13 +247,26 @@
                         <h1>Total Price</h1>
                         <h1>BDT <span id="totalPayment"> 00</span></h1>
                     </div>
+                    <div class="font-bold flex justify-between text-xl">
+                        <h1>Discount</h1>
+                        <h1>BDT <span id="totalDiscount"> 00</span></h1>
+                    </div>
+                    <div class="flex items-center ">
+                        <input class="w-full px-5 py-3 rounded-l-lg border-none" placeholder="Have any copupon?"
+                            type="text" name="" id="copounCode">
+                        <button class=" py-3 px-5  rounded-r-lg bg-[#1DD100] text-white font-semibold" onclick="applyToken()">Apply</button>
+                    </div>
+                    <div class="font-bold flex justify-between text-xl">
+                        <h1>Grand Total</h1>
+                        <h1>BDT <span id="grandTotal"> 00</span></h1>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-    
-        
+
+
 
 
 

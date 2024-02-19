@@ -16,27 +16,31 @@ for (const btn of btnCollection) {
   btn.addEventListener("click", function (e) {
     seat = seat - 1;
     buySeat = buySeat + 1;
+    const totalTaka = buySeat * 550;
+
     if (buySeat > 4) {
-    alert('You Can not buy more than 4 ticket')
+      alert('You Can not buy more than 4 ticket')
     }
-    console.log(seat, buySeat);
+
     setNewValue('totalSeat', seat)
-    setNewValue('buySeat',buySeat)
-    setNewValue('totalPayment',buySeat*550)
+    setNewValue('buySeat', buySeat)
+    setNewValue('totalPayment', totalTaka)
 
-    btn.classList.add('bg-green-600','pointer-events-none', 'cursor-not-allowed');
- 
-
+    btn.classList.add('bg-green-600', 'pointer-events-none', 'cursor-not-allowed');
   })
+
 
 }
 
 
+
+
 // get the value by id
 function getValue(id) {
-  const total = document.getElementById(id).innerHTML;
-  const intTotal = parseInt(total)
-  return intTotal
+  const copoun = document.getElementById(id).value;
+  copoun.reset();
+
+  return copoun
 }
 
 // seat  value through the id and new value
