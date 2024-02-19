@@ -6,3 +6,8 @@ document.getElementById("redirectButton").addEventListener("click", function() {
   })
 
 })
+
+
+// get all the button through the parent
+const btnParent = document.getElementsByClassName('btn-container');
+console.log(btnParent);
