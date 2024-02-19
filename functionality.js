@@ -10,13 +10,25 @@ document.getElementById("redirectButton").addEventListener("click", function () 
 
 // get all the button through the parent
 const btnCollection = document.getElementsByClassName('click-btn');
+let seat = 20;
+let buySeat = 0;
 for (const btn of btnCollection) {
-
   btn.addEventListener("click", function (e) {
-    btn.classList.add('bg-green-600', 'cursor-not-allowed');
-    const seatNumber = getValue('totalSeat')
-    const seatRemaining= seatNumber-1;
+    seat = seat - 1;
+    buySeat = buySeat + 1;
+    if (buySeat > 4) {
+    alert('You Can not buy more than 4 ticket')
+    }
+    console.log(seat, buySeat);
+    setNewValue('totalSeat', seat)
+    setNewValue('buySeat',buySeat)
+    setNewValue('totalPayment',buySeat*550)
+
+    btn.classList.add('bg-green-600','pointer-events-none', 'cursor-not-allowed');
+ 
+
   })
+
 }
 
 
@@ -28,6 +40,7 @@ function getValue(id) {
 }
 
 // seat  value through the id and new value
-function setNewValue (id,value){
+function setNewValue(id, value) {
+  document.getElementById(id, value).innerText = value;
 
 }
