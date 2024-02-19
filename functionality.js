@@ -17,20 +17,18 @@ for (const btn of btnCollection) {
     seat = seat - 1;
     buySeat = buySeat + 1;
     const totalTaka = buySeat * 550;
-    const token = document.getElementById('getToken')
-    token.addEventListener("click",function(){
-      console.log('jkhkjhkjh');
-    })
-
     if (buySeat > 4) {
       alert('You Can not buy more than 4 ticket')
     }
 
 
+
+
+
     setNewValue('totalSeat', seat)
     setNewValue('buySeat', buySeat)
     setNewValue('totalPayment', totalTaka)
-    setNewValue('grandTotal',totalTaka)
+
 
     btn.classList.add('bg-green-600', 'pointer-events-none', 'cursor-not-allowed');
   })
@@ -38,7 +36,21 @@ for (const btn of btnCollection) {
 
 
 }
+const token = document.getElementById('getToken')
+token.addEventListener("click", function (e) {
+  const grandTotal = buySeat * 550;
+  const token = document.getElementById('copounCode').value;
+  if (token == 'NEW15') {
+    const discount = ( (grandTotal * 15 / 100));
+    const mustPay = grandTotal - discount;
+    setNewValue('grandTotal',mustPay)
+    setNewValue('totalDiscount',discount)
+   
 
+    console.log( grandTotal, discount);
+  }
+
+})
 
 
 
