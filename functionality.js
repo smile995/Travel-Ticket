@@ -40,14 +40,26 @@ const token = document.getElementById('getToken')
 token.addEventListener("click", function (e) {
   const grandTotal = buySeat * 550;
   const token = document.getElementById('copounCode').value;
+  const parent=document.getElementById('needHide')
   if (token == 'NEW15') {
     const discount = ( (grandTotal * 15 / 100));
     const mustPay = grandTotal - discount;
     setNewValue('grandTotal',mustPay)
     setNewValue('totalDiscount',discount)
+    parent.classList.add('hidden');
    
-
-    console.log( grandTotal, discount);
+  }
+  else if (token == 'COUPLE20') {
+    const discount = ( (grandTotal * 20 / 100));
+    const mustPay = grandTotal - discount;
+    setNewValue('grandTotal',mustPay)
+    setNewValue('totalDiscount',discount);
+    parent.classList.add('hidden');
+   
+  }
+  else{
+    setNewValue('grandTotal',grandTotal)
+    alert('Your Copupone code is not matching')
   }
 
 })
