@@ -135,7 +135,7 @@
                             <button
                                 class="flex items-center gap-2 py-2 px-3 rounded-md bg-green-200 font-semibold text-[#1DD100]">
                                 <img src="./images/seat-green.png" alt="">
-                                <p><span>20 </span> Seat Left</p>
+                                <p><span id="totalSeat">20 </span> Seat Left</p>
                             </button>
                         </div>
                     </div>
@@ -184,15 +184,47 @@
                             <img class="w-[30px]" src="./images/steering-wheel.png" alt="">
                         </div>
                     </div>
-                    <div class="grid grid-cols-4 gap-3 btn-container ">
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">A1</button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">A2</button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">A3</button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">A4 </button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">B1</button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">B2</button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">B3 </button>
-                        <button class="px-4 py-2 bg-slate-300 rounded-lg font-bold hover:bg-green-300">B4</button>
+                    <div class="grid grid-cols-4 gap-3 ">
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">A1</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">A2</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">A3</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">A4 </button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">B1</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">B2</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">B3 </button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">B4</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">C1</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">C2</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">C3 </button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">C4</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">D1</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">D2</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">D3 </button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">D4</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">E1</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">E2</button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">E3 </button>
+                        <button class="px-4 click-btn
+                        py-2 bg-slate-300 rounded-lg font-bold">E4</button>
 
                     </div>
                 </div>
@@ -203,30 +235,6 @@
         </section>
 
     
-
-        <body>
-            <div class="flex justify-center mt-8">
-                <!-- Button with event listener -->
-                <button id="myButton"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    onclick="changeColorAndDisable()">
-                    Click Me
-                </button>
-            </div>
-
-            <script>
-                function changeColorAndDisable() {
-                    var button = document.getElementById('myButton');
-                    // Change button color
-                    button.classList.remove('bg-blue-500', 'hover:bg-blue-700');
-                    button.classList.add('bg-gray-400', 'cursor-not-allowed');
-
-                    // Disable button
-                    button.disabled = true;
-                }
-            </script>
-        </body>
-
         
 
 
